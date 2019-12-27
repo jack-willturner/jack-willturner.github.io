@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>A Whirlwind Tour of Computer Science</title>
+
+<meta charset="utf-8"/>
+
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet">
+
+<style type="text/css">
+body {
+font-family: 'DM Sans', sans-serif !important;
+}
+
+
+a:link, a:hover, a:visited, a:active { color:#306BAC !important; }
+
+.nodecor:link, .nodecor:hover, .nodecor:visited, .nodecor:active { color:#333 !important; text-decoration: none; }
+
+.boldtext {
+    font-weight: 700 !important;
+}
+
+.semiboldtext {
+    font-weight: 500 !important;
+}
+
+.smalltext {
+font-size:.8em;
+}
+
+#maintext {
+  font-size : 1.3em;
+}
+
+#name {
+font-size: 3.6em;
+line-height: 1em;
+margin-top: .5em;
+margin-bottom: .2em;
+}
+
+#title {
+font-size: 1.2em;
+}
+
+#overview {
+font-size: 1.2em;
+}
+
+#subtitle {
+  font-size:1.2em;
+  margin-top:2em;
+}
+
+.icon-bar a {
+  float: left; /* Float links side by side */
+  text-align: left; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 36px; /* Increased font size */
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+
+</style>
+</head>
+
+<body>
+
+  <div class="container" id="navbar" style="margin-top: 5.5rem;">
+    <div class="col-md-offset-1 col-md-9">
+    <div class="row">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="icon-bar">
+      <a class="active" href="../index.html">home</a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+<div class="container" id="content">
+  <div class="col-md-offset-1 col-md-9">
+  <div class="row">
+      <div id="name">
+      	<div class="semiboldtext">A Whirlwind Tour of Computer Science</div>
+      </div>
+  </div>
+  </div>
+ </div>
+
+ <div class="container" id="maintext" style="margin-top: 5.5rem;">
+   <div class="col-md-offset-1 col-md-9">
+   <div class="row">
+     <p>
+      I am very lucky to do my research somewhere between a compiler group and a machine learning group.
+      </p>
+      <p>
+      Since most of them are physicists, mathematicians, or engineers, many of the machine learning researchers I come across are perplexed by the idea of a whole degree about programming, to which I eagerly quote Michael Fellows:
+      </p>
+
+        <blockquote>
+          <br>
+        <p>
+          Computer science is no more about computers than astronomy is about telescopes, biology is about microscopes, or chemistry is about beakers and test tubes.
+        (cite: http://archive.cra.org/CRN/issues/9301.pdf)
+        </p>
+        </blockquote>
+
+
+      <p>
+      Despite how fun this quote is, it’s often quite hard to pinpoint what really separates computer science from anything else. One could argue we are closer to discrete mathematicians, but doesn’t that just make us <i>bad</i> mathematicians?
+      </p>
+
+      <div class="col-md-offset-1" style="margin-top:2em; margin-bottom:2em;">
+        <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Date: I’m a computer scientist<br>Me (trying to impress him): I’m hopeless at math too</p>&mdash; Loch Nessa Monster🌸 (@pasiphae_goals) <a href="https://twitter.com/pasiphae_goals/status/1092123079298478080?ref_src=twsrc%5Etfw">February 3, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+      <p>
+      The answer that I’ve settled on is that there is something unexplainably <b>fun</b> about studying computer science. And isn’t that it's all about anyway?
+      </p>
+
+      <p>
+      So, I present my list of resources; a whirlwind tour of the wonders of computer science.
+      </p>
+
+
+      <div id="subtitle">
+        Full Courses
+      </div>
+
+      <br>
+
+      <ul>
+        <li><b><a href="https://computationstructures.org/index.html">Computation Structures</a></b> <br>
+            If I had to recommend one tour of computer science, it would be this one.
+            It covers everything from basic circuit design to virtual memory and parallel programming,
+            and yet somehow still manages to skirt the line between computer engineering and theoretical
+            computer science.
+        </li>
+        <br>
+
+        <li><b><a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-001-structure-and-interpretation-of-computer-programs-spring-2005/">Structure and Interpretation of Computer Programs</a></b> <br>
+            An undisputable classic. It comes with lecture videos, a book, exercises and more!
+            You might bemoan the use of Scheme, to which I respond with a pointer to the above quote.
+        </li>
+
+        <br>
+
+        <li><b><a href="https://see.stanford.edu/Course/CS107">Programming Paradigms (CS107)</a></b> <br>
+          This heavily overlaps with Computation Structures (see above) but is perhaps a little more applied,
+          and equal in beauty.
+        </li>
+
+      </ul>
+
+
+      <div id="subtitle">
+        Books
+      </div>
+
+      <br>
+
+      <ul>
+        <li><b><a href="https://en.wikipedia.org/wiki/Gödel,_Escher,_Bach">Gödel Escher Bach: An Eternal Golden Braid</a></b> <br>
+          To me, GEB is in some ways the bedtime story version of Structure and Interpretation of Computer Programs.
+          Every chapter of this book will delight and surprise you.
+        </li>
+
+        <br>
+
+        <li><b><a href="http://dev.stephendiehl.com/fun/WYAH.pdf">Write You A Haskell</a></b> <br>
+          Have you ever wondered how to make your own programming language? It turns out that the process of doing
+          so requires a deep understanding of some of the hardest and most intricate problems in computer science.
+          Compiler technology lends itself well to the use of nealty composed trees, graphs, search algorithms, and more.
+
+      </ul>
+
+      <div id="subtitle">
+        Projects to be aware of
+      </div>
+
+      <br>
+
+      <p>
+      I have a grand plan to write a blog post about all of these, but for now I will settle for a list:
+      </p>
+      <ul>
+        <li><b>TVM</b> <br>
+        </li>
+
+        <li><b>JAX</b> <br>
+        </li>
+
+        <li><b>TorchScript</b> <br>
+        </li>
+
+        <li><b>MLIR</b> <br>
+        </li>
+      </ul>
+
+   </div>
+   </div>
+  </div>
+
+
+
+</body> </html>
