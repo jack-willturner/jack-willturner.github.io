@@ -4551,7 +4551,7 @@ form{
   .bp3-running-text table th, table.bp3-html-table th{
     color:#182026;
     font-weight:600; }
-
+  
   .bp3-running-text table td,
   table.bp3-html-table td{
     color:#182026; }
@@ -9641,8 +9641,6 @@ html {
 body {
   color: unset;
   font-family: var(--jp-ui-font-family);
-  width: 70%;
-  margin: auto;
 }
 
 p {
@@ -14240,17 +14238,17 @@ a.anchor-link {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: {
-                    automatic: true
+                    linebreaks: { 
+                    automatic: true 
                     }
                 },
                 "HTML-CSS": {
-                    linebreaks: {
-                    automatic: true
+                    linebreaks: { 
+                    automatic: true 
                     }
                 }
             });
-
+        
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14261,15 +14259,15 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Call-by-object-reference">Call by object reference<a class="anchor-link" href="#Call-by-object-reference">&#182;</a></h1><p>These notes are taken from GeeksforGeeks.</p>
-<p>Essentially - mutable objects act like call-by-reference, while immutable objects act like call-by value.</p>
-<h2 id="&#160;Immutable-types:-call-by-reference">&#160;Immutable types: call-by-reference<a class="anchor-link" href="#&#160;Immutable-types:-call-by-reference">&#182;</a></h2><p>So <em>immutable</em> types:</p>
+<h1 id="Call-by-object-reference">Call by object reference<a class="anchor-link" href="#Call-by-object-reference">&#182;</a></h1><p>These notes are taken from a mix of <a href="https://www.geeksforgeeks.org/is-python-call-by-reference-or-call-by-value/">GeeksforGeeks</a>, the <a href="https://docs.python-guide.org/writing/gotchas/">Hitchiker's Guide to Python</a>, and a few mistakes I made personally!</p>
+<p>The tl;dr is: <strong>mutable objects</strong> act like <em>call-by-reference</em>, while <strong>immutable objects</strong> act like <em>call-by value</em>.</p>
+<h2 id="&#160;Immutable-types:-call-by-reference">&#160;Immutable types: call-by-reference<a class="anchor-link" href="#&#160;Immutable-types:-call-by-reference">&#182;</a></h2><p>So <em>immutable</em> types such as:</p>
 <ul>
 <li>integers</li>
 <li>strings</li>
-<li>tuples
-will all act like call-by-value.</li>
+<li>tuples  </li>
 </ul>
+<p>will all act like call-by-value.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -14282,10 +14280,10 @@ will all act like call-by-value.</li>
 
 <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
     <span class="n">string</span> <span class="o">=</span> <span class="s2">&quot;abc&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> 
 
 <span class="n">test</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -14300,7 +14298,7 @@ will all act like call-by-value.</li>
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14330,10 +14328,10 @@ cba
 
 <span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">ls</span><span class="p">):</span>
     <span class="n">ls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span> 
 
 <span class="n">test</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ls</span><span class="p">)</span> 
 </pre></div>
 
      </div>
@@ -14348,7 +14346,7 @@ cba
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14398,7 +14396,7 @@ cba
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14448,7 +14446,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14499,7 +14497,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14548,7 +14546,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14596,7 +14594,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -14614,7 +14612,7 @@ a b
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>:evenmoresurprisedpikachu:</p>
+<p>At first this behaviour can seem surprising, but once you understand that mutable and immutable objects are treated differently it will start to seem natural.</p>
 
 </div>
 </div>
@@ -14645,7 +14643,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
 
 
@@ -14689,7 +14687,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
@@ -14733,7 +14731,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
@@ -14775,7 +14773,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
 
 
@@ -14817,7 +14815,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
@@ -14879,7 +14877,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
@@ -14955,7 +14953,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
 
 
@@ -15006,7 +15004,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15052,7 +15050,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15098,7 +15096,7 @@ a b
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
 
 
@@ -15143,7 +15141,7 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
 
 
@@ -15187,7 +15185,7 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[20]:</div>
 
 
@@ -15212,7 +15210,8 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Example:-Default-Function-Arguments">Example: Default Function Arguments<a class="anchor-link" href="#Example:-Default-Function-Arguments">&#182;</a></h3><p>Imagine we have a class whose initialiser has a default value, like an empty list.</p>
+<h3 id="Example:-Mutable-Default-Arguments">Example: Mutable Default Arguments<a class="anchor-link" href="#Example:-Mutable-Default-Arguments">&#182;</a></h3><p>One thing I didn't realise at first was that default arguments are evaluated once, even for different instances of a class.</p>
+<p>Imagine we have a class whose initialiser has a default value, like an empty list.</p>
 <p>We create multiple instances of that class: does each instance have its own list?</p>
 
 </div>
@@ -15225,7 +15224,7 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">List</span><span class="p">:</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="p">[]):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ls</span> <span class="o">=</span> <span class="n">ls</span>
-
+        
 <span class="n">a</span> <span class="o">=</span> <span class="n">List</span><span class="p">()</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">List</span><span class="p">()</span>
 
@@ -15247,7 +15246,7 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
@@ -15264,7 +15263,7 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>How about if we don't use the default value and instead initialise to the empty list directly?</p>
+<p>So what should we do instead?</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
@@ -15274,9 +15273,11 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">List</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="p">[]):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ls</span> <span class="o">=</span> <span class="p">[]</span>
-
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">ls</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">ls</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ls</span> <span class="o">=</span> <span class="n">ls</span>
+        
 <span class="n">a</span> <span class="o">=</span> <span class="n">List</span><span class="p">()</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">List</span><span class="p">()</span>
 
@@ -15298,7 +15299,7 @@ Imagine now we want to make a change to <code>b</code> <strong>without</strong> 
 
 <div class="jp-OutputArea-child">
 
-
+    
     <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 
 
