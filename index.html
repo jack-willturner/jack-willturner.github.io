@@ -7,22 +7,14 @@
 <meta name=viewport content="width=device-width, initial-scale=1">
 <link rel="icon" href="/resources/jt.png">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Source+Code+Pro">
+
+<link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet">
 
 <style type="text/css">
-
 body {
-  font-family: 'Monaco', sans-serif !important;
-  margin: auto;
-  width: 50%;
-  padding: 10px;
+font-family: 'DM Sans', sans-serif !important;
 }
 
-.heading {
-  margin: auto;
-  width: 50%;
-  padding: 10px;
-}
 
 a:link, a:hover, a:visited, a:active { color:#306BAC !important; }
 
@@ -93,20 +85,66 @@ margin-bottom: .5em;
 margin-top: .5em;
 }
 
+.pubyear {
+ margin-top: 12px;
+ clear: both;
+ font-size: 1.2em;
+ color: 222;
+}
+
+.pubaward {
+font-weight: 600;
+font-style: italic;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  overflow: auto;
+  display: inline-block;
+}
+
+.authlist{
+  font-size:12px;
+  color:gray;
+}
+
+.title{
+  font-size:18px;
+  font-weight: bold;
+}
+
+.date{
+  font-size:12px;
+}
+
+.abstract {
+  font-size:14px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 </style>
 </head>
 
 <body>
 
-  <div class="heading">
-    <div class="row", style="text-align: center; ">
+<div class="container" id="content" style="margin-top: 5.5rem;">
+  <div class="row">
+    <div class ="col-md-offset-2 col-md-4">
         <div id="name">
-          <div class="semiboldtext">Jack Turner</div>
+        	<div class="semiboldtext">Jack Turner</div>
         </div>
         <div id="title" style="margin-top: 1.5rem;">
-          <div>PhD student</div>
-          <div>University of Edinburgh</div>
+          <div>PhD student, University of Edinburgh</div>
           <div id="email">jack.turner@ed.ac.uk</div>
 
           <div style="margin-top: 1.5rem;"></div>
@@ -114,10 +152,17 @@ margin-top: .5em;
 
         </div>
     </div>
-  </div>
+
+    <div class="col-md-3">
+     <div id="picpad">
+     <img src ="resources/profile.jpeg" alt="pdb" id="pdb-pic" style="height: 220px; margin-top: 10px;">
+     </div>
+   </div>
+ </div>
 
 
   <div class="row">
+  <div class ="col-md-offset-2 col-md-7">
   <div id="overview" style="margin-top: 1.5rem;">
 
     <hr>
@@ -140,50 +185,190 @@ margin-top: .5em;
      </p>
   </div>
   </div>
+  </div>
 
   <div class="row">
+  <div class ="col-md-offset-2 col-md-7">
+
   <div style="margin-top: 3.5rem;"></div>
     <div>
       <h3>Conference papers</h4>
     <div id="publist">
-      <ul>
-      <li><a class="pubtitle" href="https://asplos-conference.org/abstracts/asplos21-paper969-extended_abstract.pdf">Neural Architecture Search as Program Transformation Exploration</a>, <span class="pubmetadata"><span class="pubauthors">Jack Turner, Elliot J. Crowley, Michael O'Boyle. </span> <span class="pubvenue"><i>To appear at ASPLOS, 2021.</i></span></span></span></li>
-      <li><a class="pubtitle" href="https://arxiv.org/abs/1910.05199">Bayesian Meta-Learning for the Few-Shot Setting via Deep Kernels</a>, <span class="pubmetadata"><span class="pubauthors">Massimiliano Patacchiola, Jack Turner, Elliot J. Crowley, Amos Storkey. </span> <span class="pubvenue"><i>NeurIPS, 2020.</i></span></span></span></li>
-      <li><a class="pubtitle" href="https://arxiv.org/abs/1906.04113">BlockSwap: Fisher-guided Block Substitution for Network Compression</a>, <span class="pubmetadata"><span class="pubauthors">Jack Turner*, Elliot J. Crowley*, Amos Storkey, Michael O'Boyle, Gavin Gray. </span> <span class="pubvenue"><i>ICLR, 2020.</i> (* equal contribution).</span></span></span></li>
-      <li><a class="pubtitle" href="https://arxiv.org/abs/1809.07196">Characterising Across-Stack Optimisations for Deep Convolutional Neural Networks</a>, <span class="pubmetadata"><span class="pubauthors">Jack Turner, José Cano, Valentin Radu, Elliot J. Crowley, Michael O'Boyle, Amos Storkey.</span> <span class="pubvenue"><i>IISWC, 2018.</i></span></span></span></li>
-      </ul>
-    </div>
-    </div>
-  </div>
+
+      <div id="pubtitle">
+        <div class="container card">
+          <div class="row">
+              <div class="col-sm-1 date">
+                19th Apr, 2020
+                <span class="badge badge-primary" style="font-size:8px;">ASPLOS</span>
+              </div>
+              <div class="col-sm-4">
+                <a class="pubtitle" href="https://asplos-conference.org/abstracts/asplos21-paper969-extended_abstract.pdf"><p class="title">Neural Architecture Search as Program Transformation Exploration </p></a>
+                <p class="authlist">Jack Turner, Elliot J. Crowley, Michael O'Boyle.</p>
+                <p class="abstract">
+                  A compiler-oriented approach to neural architecture search
+                  which allows us to generate new types of convolution.
+                </p>
+              </div>
+              <div class="col-sm-2">
+                <img src="resources/poly.png" style="width:150px;">
+              </div>
+          </div>
+        </div>
+      </div>
 
 
-  <div class="row">
-  <div style="margin-top: 3.5rem;"></div>
-    <div>
-      <h3>Workshops/Preprints</h4>
-      <div id="publist">
-        <ul>
-        <li><a class="pubtitle" href="https://arxiv.org/abs/2006.04647">Neural Architecture Search Without Training</a>, <span class="pubmetadata"><span class="pubauthors">Joseph Mellor, Jack Turner, Amos Storkey, Elliot J. Crowley. </span> <span class="pubvenue"><i>arXiv preprint, 2020.</i></span></span></span></li>
-        <li><a class="pubtitle" href="https://arxiv.org/abs/1810.10460">Distilling with Performance Enhanced Students</a>, <span class="pubmetadata"><span class="pubauthors">Jack Turner*, Elliot J. Crowley*, Valentin Radu, José Cano, Amos Storkey, Michael O'Boyle. </span> <span class="pubvenue"><i>ARM Research Summit, 2019.</i> (* equal contribution).</span></span></span></li>
-        <li><a class="pubtitle" href="https://arxiv.org/abs/1810.04622">Pruning neural networks: is it time to nip it in the bud?</a>, <span class="pubmetadata"><span class="pubauthors">Elliot J. Crowley, Jack Turner, Amos Storkey,  Michael O'Boyle. </span> <span class="pubvenue"><i>NeurIPS Workshop on Compact Deep Neural Networks with Industrial Applications, 2018</i>.</span></span></span></li>
-        </ul>
+      <div id="pubtitle">
+        <div class="container card">
+          <div class="row">
+              <div class="col-sm-1 date">
+                6th Dec, 2020
+                <span class="badge badge-primary" style="font-size:8px;">NeurIPS</span>
+              </div>
+              <div class="col-sm-4">
+                <a class="pubtitle" href="https://arxiv.org/abs/1910.05199"><p class="title"> Bayesian Meta-Learning for the Few-Shot Setting via Deep Kernels </p></a>
+                <p class="authlist">Massimiliano Patacchiola, Jack Turner, Elliot J. Crowley, Michael O'Boyle, Amos Storkey.</p>
+                <p class="abstract">
+                  A Bayesian treatment for the meta-learning inner loop through the use of Gaussian Processes
+                  and neural networks.
+                </p>
+              </div>
+              <div class="col-sm-2">
+                <img src="resources/gp.png" style="width:150px;">
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="pubtitle">
+        <div class="container card">
+          <div class="row">
+              <div class="col-sm-1 date">
+                26th Apr, 2020
+                <span class="badge badge-primary" style="font-size:8px;">ICLR</span>
+              </div>
+              <div class="col-sm-4">
+                <a class="pubtitle" href="https://arxiv.org/abs/1906.04113"><p class="title"> BlockSwap: Fisher-guided Block Substitution for Network Compression </p></a>
+                <p class="authlist">Jack Turner, Elliot J. Crowley, Amos Storkey, Michael O'Boyle, Gavin Gray.</p>
+                <p class="abstract">
+                  One-shot compression of neural networks by swapping out residual
+                  blocks for cheaper alternatives, guided by Fisher Information at
+                  initialisation.
+                </p>
+              </div>
+              <div class="col-sm-2">
+                <img src="resources/blockswap.png" style="width:150px;">
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+    <div id="pubtitle">
+      <div class="container card">
+        <div class="row">
+            <div class="col-sm-1 date">
+              30th Feb, 2018
+              <span class="badge badge-primary" style="font-size:8px;">IISWC</span>
+            </div>
+            <div class="col-sm-4">
+              <a class="pubtitle" href="https://arxiv.org/abs/1809.07196"><p class="title"> Characterising Across-Stack Optimisations for Deep Neural Networks </p></a>
+              <p class="authlist">Jack Turner,  Elliot J. Crowley, Amos Storkey, Michael O'Boyle.</p>
+              <p class="abstract">
+                A study on the interaction of optimisations applied at different levels
+                of the compilation stack for neural networks - from neural architectural
+                decisions through to hardware design.
+              </p>
+            </div>
+            <div class="col-sm-2">
+              <img src="resources/charac.png" style="width:150px;">
+            </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="row">
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="row">
+  <div class ="col-md-offset-2 col-md-8">
     <div style="margin-top: 3.5rem;"></div>
-    <div>
-      <h3>Blog Posts</h4>
-      <div id="publist">
-        <ul>
-        <li><a class="pubtitle" href="https://jack-willturner.github.io/posts/call-by-obj.html">Call by Object Reference</a>. <span class="pubmetadata"><span class="pubauthors">A note on Python's call-by-object-reference system for those who want a brief overview or have been caught out by it before.</span> <span class="pubvenue"></span></span></span></li>
-        <li><a class="pubtitle" href="https://jack-willturner.github.io/posts/gps.html">Exact Gaussian Processes in NumPy</a>. <span class="pubmetadata"><span class="pubauthors">Some introductory notes on Gaussian Processes and a small, self-contained implementation in NumPy.</span> <span class="pubvenue"></span></span></span></li>
-        <li><a class="pubtitle" href="https://jack-willturner.github.io/posts/systems-for-ml.html">Computer Science Introductions</a>. <span class="pubmetadata"><span class="pubauthors">My favourite resources for learning about Computer Science, especially aimed at Machine Learners who come from non-CS backgrounds.</span> <span class="pubvenue"></span></span></span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <div>
+        <h3>Workshops/Preprints</h4>
 
-</body> 
-</html>
+        <div id="publist">
+          <div class="container card">
+            <div class="row">
+                <div class="col-sm-1 date">
+                  8th June, 2020
+                  <span class="badge badge-secondary" style="font-size:8px;">preprint</span>
+                </div>
+                <div class="col-sm-4">
+                  <a class="pubtitle" href="https://arxiv.org/abs/2006.04647"><p class="title"> Neural Architecture Search Without Training </p></a>
+                  <p class="authlist">Joseph Mellor, Jack Turner, Amos Storkey, Elliot J. Crowley.</p>
+                  <p class="abstract">
+                    A low-cost measure for scoring networks at initialisation
+                    which allows us to perform architecture search in a matter
+                    of seconds instead of hours or days.
+                  </p>
+                </div>
+                <div class="col-sm-2">
+                  <img src="resources/naswot.png" style="width:150px;">
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="publist">
+          <div class="container card">
+            <div class="row">
+                <div class="col-sm-1 date">
+                  7th June, 2019
+                  <span class="badge badge-info" style="font-size:8px;">NeurIPS</span>
+                  <span class="badge badge-info" style="font-size:8px;">CDNNRIA</span>
+                </div>
+                <div class="col-sm-4">
+                  <a class="pubtitle" href="https://arxiv.org/abs/1810.04622"> <p class="title"> Pruning neural networks: is it time to nip it in the bud? </p></a>
+                  <p class="authlist">Elliot J. Crowley, Jack Turner, Michael O'Boyle, Amos Storkey.</p>
+                  <p class="abstract">
+                    An investigation into the efficacy of structured pruning
+                    for compressing neural networks. We show that simple
+                    downscaling schemes can be used to produce more performant
+                    networks than their pruned equivalents.
+                  </p>
+                </div>
+                <div class="col-sm-2">
+                  <img src="resources/spruning.png" style="width:150px;">
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class ="col-md-offset-2 col-md-7">
+    <div style="margin-top: 3.5rem;"></div>
+      <div>
+        <h3>Blog Posts</h4>
+        <div id="publist">
+          <ul>
+          <li><a class="pubtitle" href="https://jack-willturner.github.io/posts/call-by-obj.html"> Call by Object Reference</a>. <span class="pubmetadata"><span class="pubauthors">A note on Python's call-by-object-reference system for those who want a brief overview or have been caught out by it before.</span> <span class="pubvenue"></span></span></span></li>
+          <li><a class="pubtitle" href="https://jack-willturner.github.io/posts/gps.html"> Exact Gaussian Processes in NumPy</a>. <span class="pubmetadata"><span class="pubauthors">Some introductory notes on Gaussian Processes and a small, self-contained implementation in NumPy.</span> <span class="pubvenue"></span></span></span></li>
+          <li><a class="pubtitle" href="https://jack-willturner.github.io/posts/systems-for-ml.html"> Computer Science Introductions</a>. <span class="pubmetadata"><span class="pubauthors">My favourite resources for learning about Computer Science, especially aimed at Machine Learners who come from non-CS backgrounds.</span> <span class="pubvenue"></span></span></span></li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+</body> </html>
