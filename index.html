@@ -6,8 +6,7 @@
 
 <meta name=viewport content="width=device-width, initial-scale=1">
 <link rel="icon" href="/resources/jt.png">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet">
 
 <style type="text/css">
@@ -67,6 +66,12 @@ font-size: 1.1em;
 margin-top: .5em;
 }
 
+.content {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 .subcontent {
  margin-top: 1em;
  margin-bottom: 1.5em;
@@ -76,14 +81,14 @@ margin-top: .5em;
 font-weight: 500;
 }
 
-#publist {
-margin-bottom: 24px;
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
 }
 
-#publist li {
-margin-bottom: .5em;
-margin-top: .5em;
-}
 
 .pubyear {
  margin-top: 12px;
@@ -102,8 +107,6 @@ font-style: italic;
   background-color: white;
   padding: 20px;
   margin-top: 20px;
-  overflow: auto;
-  display: inline-block;
 }
 
 .authlist{
@@ -124,12 +127,6 @@ font-style: italic;
   font-size:14px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 
 </style>
@@ -137,9 +134,10 @@ font-style: italic;
 
 <body>
 
-<div class="container" id="content" style="margin-top: 5.5rem;">
+<div class="content" style="margin-top: 5.5rem;">
+
   <div class="row">
-    <div class ="col-md-offset-2 col-md-4">
+    <div class ="col-sm-offset-5 col-sm-8">
         <div id="name">
         	<div class="semiboldtext">Jack Turner</div>
         </div>
@@ -153,17 +151,14 @@ font-style: italic;
         </div>
     </div>
 
-    <div class="col-md-3">
-     <div id="picpad">
-     <img src ="resources/profile.jpeg" alt="pdb" id="pdb-pic" style="height: 220px; margin-top: 10px;">
-     </div>
-   </div>
+    <div class="col-sm-4">
+      <img class="float-right" src ="resources/profile.jpeg" alt="pdb" id="pdb-pic" style="height: 220px; margin-top: 10px;">
+    </div>
 
- </div>
-
+  </div>
 
   <div class="row">
-  <div class ="col-md-offset-2 col-md-7">
+  <div class ="col-sm-offset-2">
   <div id="overview" style="margin-top: 1.5rem;">
 
     <hr>
@@ -188,8 +183,7 @@ font-style: italic;
   </div>
   </div>
 
-  <div class="row">
-  <div class ="col-md-offset-2 col-md-7">
+  <div class="col-sm-offset-2">
 
   <div style="margin-top: 3.5rem;"></div>
     <div>
@@ -199,11 +193,11 @@ font-style: italic;
       <div id="pubtitle">
         <div class="container card">
           <div class="row">
-              <div class="col-sm-1 date">
+              <div class="col-sm-2 date">
                 19th Apr, 2020
                 <span class="badge badge-primary" style="font-size:8px;">ASPLOS</span>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-7">
                 <a class="pubtitle" href="https://asplos-conference.org/abstracts/asplos21-paper969-extended_abstract.pdf"><p class="title">Neural Architecture Search as Program Transformation Exploration </p></a>
                 <p class="authlist">Jack Turner, Elliot J. Crowley, Michael O'Boyle.</p>
                 <p class="abstract">
@@ -211,7 +205,7 @@ font-style: italic;
                   which allows us to generate new types of convolution.
                 </p>
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-1.5">
                 <img src="resources/poly.png" style="width:150px;">
               </div>
           </div>
@@ -222,11 +216,11 @@ font-style: italic;
       <div id="pubtitle">
         <div class="container card">
           <div class="row">
-              <div class="col-sm-1 date">
+              <div class="col-sm-2 date">
                 6th Dec, 2020
                 <span class="badge badge-primary" style="font-size:8px;">NeurIPS</span>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-7">
                 <a class="pubtitle" href="https://arxiv.org/abs/1910.05199"><p class="title"> Bayesian Meta-Learning for the Few-Shot Setting via Deep Kernels </p></a>
                 <p class="authlist">Massimiliano Patacchiola, Jack Turner, Elliot J. Crowley, Michael O'Boyle, Amos Storkey.</p>
                 <p class="abstract">
@@ -234,7 +228,7 @@ font-style: italic;
                   and neural networks.
                 </p>
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-1.5">
                 <img src="resources/gp.png" style="width:150px;">
               </div>
           </div>
@@ -245,11 +239,11 @@ font-style: italic;
       <div id="pubtitle">
         <div class="container card">
           <div class="row">
-              <div class="col-sm-1 date">
+              <div class="col-sm-2 date">
                 26th Apr, 2020
                 <span class="badge badge-primary" style="font-size:8px;">ICLR</span>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-7">
                 <a class="pubtitle" href="https://arxiv.org/abs/1906.04113"><p class="title"> BlockSwap: Fisher-guided Block Substitution for Network Compression </p></a>
                 <p class="authlist">Jack Turner, Elliot J. Crowley, Amos Storkey, Michael O'Boyle, Gavin Gray.</p>
                 <p class="abstract">
@@ -258,7 +252,7 @@ font-style: italic;
                   initialisation.
                 </p>
               </div>
-              <div class="col-sm-2">
+              <div class="col-sm-1.5">
                 <img src="resources/blockswap.png" style="width:150px;">
               </div>
           </div>
@@ -269,11 +263,11 @@ font-style: italic;
     <div id="pubtitle">
       <div class="container card">
         <div class="row">
-            <div class="col-sm-1 date">
+            <div class="col-sm-2 date">
               30th Feb, 2018
               <span class="badge badge-primary" style="font-size:8px;">IISWC</span>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-7">
               <a class="pubtitle" href="https://arxiv.org/abs/1809.07196"><p class="title"> Characterising Across-Stack Optimisations for Deep Neural Networks </p></a>
               <p class="authlist">Jack Turner,  Elliot J. Crowley, Amos Storkey, Michael O'Boyle.</p>
               <p class="abstract">
@@ -282,7 +276,7 @@ font-style: italic;
                 decisions through to hardware design.
               </p>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-1.5">
               <img src="resources/charac.png" style="width:150px;">
             </div>
         </div>
@@ -292,11 +286,9 @@ font-style: italic;
   </div>
 </div>
 </div>
-</div>
 
 
-<div class="row">
-  <div class ="col-md-offset-2 col-md-8">
+  <div class ="col-sm-offset-2">
     <div style="margin-top: 3.5rem;"></div>
       <div>
         <h3>Workshops/Preprints</h4>
@@ -304,11 +296,11 @@ font-style: italic;
         <div id="publist">
           <div class="container card">
             <div class="row">
-                <div class="col-sm-1 date">
+                <div class="col-sm-2 date">
                   8th June, 2020
                   <span class="badge badge-secondary" style="font-size:8px;">preprint</span>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-7">
                   <a class="pubtitle" href="https://arxiv.org/abs/2006.04647"><p class="title"> Neural Architecture Search Without Training </p></a>
                   <p class="authlist">Joseph Mellor, Jack Turner, Amos Storkey, Elliot J. Crowley.</p>
                   <p class="abstract">
@@ -317,7 +309,7 @@ font-style: italic;
                     of seconds instead of hours or days.
                   </p>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-1.5">
                   <img src="resources/naswot.png" style="width:150px;">
                 </div>
             </div>
@@ -327,12 +319,12 @@ font-style: italic;
         <div id="publist">
           <div class="container card">
             <div class="row">
-                <div class="col-sm-1 date">
+                <div class="col-sm-2 date">
                   7th June, 2019
                   <span class="badge badge-info" style="font-size:8px;">NeurIPS</span>
                   <span class="badge badge-info" style="font-size:8px;">CDNNRIA</span>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-7">
                   <a class="pubtitle" href="https://arxiv.org/abs/1810.04622"> <p class="title"> Pruning neural networks: is it time to nip it in the bud? </p></a>
                   <p class="authlist">Elliot J. Crowley, Jack Turner, Michael O'Boyle, Amos Storkey.</p>
                   <p class="abstract">
@@ -342,7 +334,7 @@ font-style: italic;
                     networks than their pruned equivalents.
                   </p>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-1.5">
                   <img src="resources/spruning.png" style="width:150px;">
                 </div>
             </div>
@@ -353,10 +345,9 @@ font-style: italic;
 
       </div>
   </div>
-</div>
 
-<div class="row">
-  <div class ="col-md-offset-2 col-md-7">
+
+  <div class ="col-sm-offset-2">
     <div style="margin-top: 3.5rem;"></div>
       <div>
         <h3>Blog Posts</h4>
@@ -369,7 +360,6 @@ font-style: italic;
         </div>
       </div>
   </div>
+
 </div>
-
-
 </body> </html>
