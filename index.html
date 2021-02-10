@@ -66,9 +66,15 @@ font-size: 1.1em;
 margin-top: .5em;
 }
 
+@media only screen and (max-width: 750px) {
+    #fadeshow1 {
+        display: none;
+    }
+}
+
 .content {
   margin: auto;
-  width: 50%;
+  max-width:800px;
   padding: 10px;
 }
 
@@ -79,14 +85,6 @@ margin-top: .5em;
 
 .pubtitle{
 font-weight: 500;
-}
-
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-
-  display: flex;
-  align-items: center;
 }
 
 
@@ -152,12 +150,11 @@ font-style: italic;
     </div>
 
     <div class="col-sm-4">
-      <img class="float-right" src ="resources/profile.jpeg" alt="pdb" id="pdb-pic" style="height: 220px; margin-top: 10px;">
+      <img class="float-right" src ="resources/profile.jpeg" id="fadeshow1" alt="pdb" id="pdb-pic" style="height: 220px; margin-top: 10px;">
     </div>
 
   </div>
 
-  <div class="row">
   <div class ="col-sm-offset-2">
   <div id="overview" style="margin-top: 1.5rem;">
 
@@ -179,7 +176,6 @@ font-style: italic;
      <p>
        In my spare time I enjoy baking bread, climbing rocks, and using Oxford commas.
      </p>
-  </div>
   </div>
   </div>
 
@@ -206,7 +202,7 @@ font-style: italic;
                 </p>
               </div>
               <div class="col-sm-1.5">
-                <img src="resources/poly.png" style="width:150px;">
+                <img src="resources/poly.png" id="fadeshow1" style="width:150px;">
               </div>
           </div>
         </div>
@@ -229,7 +225,7 @@ font-style: italic;
                 </p>
               </div>
               <div class="col-sm-1.5">
-                <img src="resources/gp.png" style="width:150px;">
+                <img src="resources/gp.png" id="fadeshow1" style="width:150px;">
               </div>
           </div>
         </div>
@@ -252,7 +248,7 @@ font-style: italic;
                   initialisation.
                 </p>
               </div>
-              <div class="col-sm-1.5">
+              <div class="col-sm-1.5" id="fadeshow1">
                 <img src="resources/blockswap.png" style="width:150px;">
               </div>
           </div>
@@ -269,7 +265,7 @@ font-style: italic;
             </div>
             <div class="col-sm-7">
               <a class="pubtitle" href="https://arxiv.org/abs/1809.07196"><p class="title"> Characterising Across-Stack Optimisations for Deep Neural Networks </p></a>
-              <p class="authlist">Jack Turner,  Elliot J. Crowley, Amos Storkey, Michael O'Boyle.</p>
+              <p class="authlist">Jack Turner, José Cano, Valentin Radu, Elliot J. Crowley, Amos Storkey, Michael O'Boyle.</p>
               <p class="abstract">
                 A study on the interaction of optimisations applied at different levels
                 of the compilation stack for neural networks - from neural architectural
@@ -277,7 +273,7 @@ font-style: italic;
               </p>
             </div>
             <div class="col-sm-1.5">
-              <img src="resources/charac.png" style="width:150px;">
+              <img src="resources/charac.png" id="fadeshow1" style="width:150px;">
             </div>
         </div>
       </div>
@@ -310,7 +306,7 @@ font-style: italic;
                   </p>
                 </div>
                 <div class="col-sm-1.5">
-                  <img src="resources/naswot.png" style="width:150px;">
+                  <img src="resources/naswot.png" id="fadeshow1" style="width:150px;">
                 </div>
             </div>
           </div>
@@ -335,7 +331,7 @@ font-style: italic;
                   </p>
                 </div>
                 <div class="col-sm-1.5">
-                  <img src="resources/spruning.png" style="width:150px;">
+                  <img src="resources/spruning.png" id="fadeshow1" style="width:150px;">
                 </div>
             </div>
           </div>
